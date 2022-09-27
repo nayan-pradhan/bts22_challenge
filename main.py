@@ -1,4 +1,3 @@
-
 from multiprocessing.dummy import Process
 from typing import Reversible
 import itertools
@@ -30,6 +29,8 @@ class ReceiverClass():
     def __init__(self):
 
         self.id = next(ReceiverClass.id_iter) # id of receiver instance
+
+        self.is_active = False # bool depending on if receiver is receiving data
 
         time_ = [] # get from receiver
         depth_ = [] # get from receiver
